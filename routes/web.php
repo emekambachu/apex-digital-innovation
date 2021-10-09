@@ -185,6 +185,10 @@ Route::get('admin/giveaway/crypto-wallet-address/create',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'createCryptoAddress'])
     ->name('admin.giveaway.crypto-wallet-address.create');
 
+Route::get('admin/giveaway/crypto-wallet-address/store',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'storeCryptoAddress'])
+    ->name('admin.giveaway.crypto-wallet-address.store');
+
 Route::get('admin/giveaway/crypto-wallet-address/{id}/edit',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'editCryptoAddress'])
     ->name('admin.giveaway.crypto-wallet-address.edit');
@@ -206,6 +210,10 @@ Route::get('admin/giveaway/transaction/create',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'createTransaction'])
     ->name('admin.giveaway.transaction.create');
 
+Route::get('admin/giveaway/transaction/store',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'storeTransaction'])
+    ->name('admin.giveaway.transaction.store');
+
 Route::get('admin/giveaway/transaction/{id}/edit',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'editTransaction'])
     ->name('admin.giveaway.transaction.edit');
@@ -226,6 +234,10 @@ Route::get('admin/giveaway/testimonies/index',
 Route::get('admin/giveaway/testimony/create',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'createTestimony'])
     ->name('admin.giveaway.testimony.create');
+
+Route::get('admin/giveaway/testimony/store',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'storeTestimony'])
+    ->name('admin.giveaway.testimony.store');
 
 Route::get('admin/giveaway/testimony/{id}/edit',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'editTestimony'])
