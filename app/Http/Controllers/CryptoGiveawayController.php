@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CryptoWalletAddress;
 use Illuminate\Http\Request;
 
 class CryptoGiveawayController extends Controller
@@ -17,13 +18,26 @@ class CryptoGiveawayController extends Controller
 
     public function indexCryptoAddress(){
 
+        $address = CryptoWalletAddress::all();
+
+        return view('admin.giveaway.crypto-wallet-address.index', compact('address'));
     }
 
     public function createCryptoAddress(){
 
+        return view('admin.giveaway.crypto-wallet-address.create');
     }
 
     public function storeCryptoAddress(Request $request){
+
+        $request->validate([
+            'name' => 'required|min:2|string|unique:crypto_wallet_address,name',
+            'address' => 'required|min:2|string|unique:crypto_wallet_address,address',
+            'remaining' => 'required',
+            'barcode'  => 'nullable|image|mimes:jpg,jpeg,png|max:5048',
+        ]);
+
+        $input = $request->all();
 
     }
 
