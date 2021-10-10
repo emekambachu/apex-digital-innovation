@@ -5,9 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Crypto ICO is a responsive modern &amp; clean cryptocurrency website landing page html with admin dashboard template , specially created for ICO Startup agencies and digital crypto currency investment website.">
-    <meta name="keywords" content="crypto, ico, cryptocurrency, bitcoin, landing, admin, dashboard, template, modern, clean, responsive">
-    <meta name="author" content="PIXINVENT">
+    <meta name="description" content="Apex Digital Innovation">
+    <meta name="keywords" content="Apex Digital innovation">
 
     <title>Apex Digital Innovation</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('apex_digital_innovation_logoonly.png') }}">
