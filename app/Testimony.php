@@ -8,8 +8,8 @@ class Testimony extends Model
 {
     protected $fillable = [
         'name',
-        'address',
-        'remaining',
-        'barcode'
+        'occupation',
+        'image',
+        'testimony'
     ];
 }

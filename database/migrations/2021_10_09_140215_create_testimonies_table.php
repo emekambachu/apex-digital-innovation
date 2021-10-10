@@ -18,6 +18,7 @@ class CreateTestimoniesTable extends Migration
             $table->string('name');
             $table->string('occupation');
             $table->text('image')->nullable();
+            $table->text('testimony');
             $table->timestamps();
         });
     }
