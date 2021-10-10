@@ -197,7 +197,7 @@
 
 <!-- BEGIN THEME JS-->
 <script src="{{ asset('main2/theme-assets/js/theme.min.js') }}"></script>
-<script src="{{ asset('main2/theme-assets/js/sales-notification.js') }}"></script>
+{{--<script src="{{ asset('main2/theme-assets/js/sales-notification.js') }}"></script>--}}
 <script src="{{ asset('main2/theme-assets/js/scripts/demo.min.js') }}"></script>
 <!-- END CRYPTO JS-->
 
