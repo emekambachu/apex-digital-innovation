@@ -10,7 +10,6 @@
     <meta name="author" content="PIXINVENT">
 
     <title>Apex Digital Innovation</title>
-    <link rel="apple-touch-icon" href="../../../theme-assets/images/ico/apple-icon-120.html">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('apex_digital_innovation_logoonly.png') }}">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,700" rel="stylesheet">
@@ -34,7 +33,8 @@
     <!-- END Custom CSS-->
 </head>
 
-<body class=" 1-column   page-animated template-3g-graphics" data-menu-open="hover" data-menu="">
+<body class=" 1-column page-animated template-3g-graphics" data-menu-open="hover" data-menu="">
+
 <!-- Preloader | Comment below code if you don't want preloader-->
 <div id="loader-wrapper">
     <svg viewbox=" 0 0 512 512" id="loader">
