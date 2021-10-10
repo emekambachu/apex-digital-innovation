@@ -9,6 +9,7 @@ Home
     <div class="content-wrapper">
         <div class="content-body">
             <main><!-- Header: 3D Graphics -->
+
                 <section class="head-area" id="head-area" data-midnight="white">
                     <div id="particles-js"></div>
                     <div class="head-content container-fluid bg-gradient d-flex align-items-center">
@@ -123,7 +124,7 @@ Home
                 <!--/ About -->
 
                 <!-- Problems & Solutions -->
-                <section id="problem-solution" class="problem-solution section-pro section-padding bg-gradient" data-midnight="white">
+                <section id="how" class="problem-solution section-pro section-padding bg-gradient" data-midnight="white">
                     <div class="container-fluid">
                         <div class="container">
                             <div class="dark-bg-heading text-center">
@@ -158,21 +159,25 @@ Home
                 <!--/ Problems & Solutions -->
 
                 <!--/ Token Sale Mobile App -->
-                <section id="token-sale-mobile-app" class="token-sale-mobile-app section-padding bg-gradient" data-midnight="white">
+                <section class="token-sale-mobile-app section-padding bg-gradient" data-midnight="white">
                     <div class="token-sale">
                         <div class="container-fluid">
                             <div class="container">
                                 <div class="dark-bg-heading text-center">
                                     <h6 class="sub-title">Pre-Sale &amp; Values</h6>
                                     <h2 class="title">CRYPTO SALE</h2>
-                                    <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">To take part in our crypto trading offer, pay to the available cryptocurrency address below</p>
+                                    <p class="content-desc animated" data-animation="fadeInUpShorter"
+                                       data-animation-delay="0.4s">
+                                        Pay to any of the address below to get your bonus crypto</p>
                                 </div>
+
+                                @foreach($address as $item)
                                 <div class="row align-items-center">
                                     <div class="col-xl-5 col-lg-6 col-md-12 animated"
                                          data-animation="fadeInLeftShorter" data-animation-delay="0.6s">
                                         <div class="token-sale-counter">
 
-                                            <h5>Bitcoin</h5>
+                                            <h5>{{ $item->name }}</h5>
                                             <div class="token-details text-center">
                                                 <!-- Counter Starts-->
                                                 <div class="clock-counter mb-4">
@@ -232,7 +237,10 @@ Home
                                                                 </a>
                                                             </li>
                                                         </ul>
-                                                        <span class="flip-clock-divider hours"><span class="flip-clock-label">Hours</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+                                                        <span class="flip-clock-divider hours">
+                                                            <span class="flip-clock-label">Hours</span>
+                                                            <span class="flip-clock-dot top"></span>
+                                                            <span class="flip-clock-dot bottom"></span></span>
                                                         <ul class="flip ">
                                                             <li class="flip-clock-before">
                                                                 <a href="#">
@@ -285,7 +293,10 @@ Home
                                                                 </a>
                                                             </li>
                                                         </ul>
-                                                        <span class="flip-clock-divider minutes"><span class="flip-clock-label">Minutes</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+                                                        <span class="flip-clock-divider minutes">
+                                                            <span class="flip-clock-label">Minutes</span>
+                                                            <span class="flip-clock-dot top"></span>
+                                                            <span class="flip-clock-dot bottom"></span></span>
                                                         <ul class="flip play">
                                                             <li class="flip-clock-before">
                                                                 <a href="#">
@@ -338,7 +349,11 @@ Home
                                                                 </a>
                                                             </li>
                                                         </ul>
-                                                        <span class="flip-clock-divider seconds"><span class="flip-clock-label">Seconds</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+                                                        <span class="flip-clock-divider seconds">
+                                                            <span class="flip-clock-label">Seconds</span>
+                                                            <span class="flip-clock-dot top"></span>
+                                                            <span class="flip-clock-dot bottom"></span>
+                                                        </span>
                                                         <ul class="flip play">
                                                             <li class="flip-clock-before">
                                                                 <a href="#">
@@ -414,323 +429,317 @@ Home
                                                             <li></li>
                                                         </ul>
                                                         <div class="progress">
-                                                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 65%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            <div class="progress-bar progress-bar-custom" role="progressbar"
+                                                                 style="width: {{ $item->remaining }}%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                                         </div>
                                                         <div class="progress-bottom">
-                                                            <div class="progress-info">65% target raised</div>
-                                                            <div class="progress-info">1 ETH = $1000 = 3177.38 CIC</div>
+                                                            <div class="progress-info">{{ $item->remaining }}% target raised</div>
+                                                            <div class="progress-info">1 {{ $item->name }} = $1000 = 3177.38 CIC</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- Progressbar Starts -->
-                                                <a href="#" class="btn btn-lg btn-gradient-blue btn-glow">Purchase Token</a>
+                                                <p href="#" class="bg-gradient">
+                                                    <strong>Payment Address</strong><br>
+                                                    {{ $item->address }}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-xl-7 col-lg-6 col-md-12 mt-5 pl-4 animated" data-animation="fadeInRightShorter" data-animation-delay="0.6s">
+                                    <div class="col-xl-7 col-lg-6 col-md-12 mt-5 pl-4 animated"
+                                         data-animation="fadeInRightShorter" data-animation-delay="0.6s">
                                         <div class="row">
-                                            <p>We have successfully reached the soft cap! Join now and get a higher discount. <br/>Get your tokens for the best price: We fixed the Ether price at $800.</p>
                                             <div class="col-md-5">
-                                                <ul class="token-sale-info">
-                                                    <li>Public PRE-ITS starts <strong class="white">13 March</strong></li>
-                                                    <li>Public ITS ends <strong class="white">25 May</strong></li>
-                                                    <li>Public ITS starts <strong class="white">25 April</strong></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-7 pr-0">
-                                                <ul class="token-sale-info">
-                                                    <li>Acceptable currencies <strong class="white">ETH, BTC, LTC</strong></li>
-                                                    <li>Minimal transaction amount <strong class="white">1 ETH, 1 BTC, 1 LTC</strong></li>
-                                                    <li>Number of tokens for sale <strong class="white">890,000 CIC (8%)</strong></li>
-                                                </ul>
+                                                <img width="400" src="{{ asset('photos/crypto-wallet-barcode/'.$item->barcode) }}"/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row align-items-center">
-                                    <div class="col-xl-5 col-lg-6 col-md-12 animated"
-                                         data-animation="fadeInLeftShorter" data-animation-delay="0.6s">
-                                        <div class="token-sale-counter">
+                                @endforeach
 
-                                            <h5>Bitcoin</h5>
-                                            <div class="token-details text-center">
-                                                <!-- Counter Starts-->
-                                                <div class="clock-counter mb-4">
+{{--                                <div class="row align-items-center">--}}
+{{--                                    <div class="col-xl-5 col-lg-6 col-md-12 animated"--}}
+{{--                                         data-animation="fadeInLeftShorter" data-animation-delay="0.6s">--}}
+{{--                                        <div class="token-sale-counter">--}}
+
+{{--                                            <h5>Bitcoin</h5>--}}
+{{--                                            <div class="token-details text-center">--}}
+{{--                                                <!-- Counter Starts-->--}}
+{{--                                                <div class="clock-counter mb-4">--}}
 
 
-                                                    <div class="clock ml-0 mt-5 d-flex justify-content-center flip-clock-wrapper">
-                                                        <span class="flip-clock-divider days"><span class="flip-clock-label">Days</span></span>
-                                                        <ul class="flip ">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">9</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">9</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip ">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">3</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">3</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <span class="flip-clock-divider hours"><span class="flip-clock-label">Hours</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
-                                                        <ul class="flip ">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">8</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">8</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">7</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">7</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <span class="flip-clock-divider minutes"><span class="flip-clock-label">Minutes</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <span class="flip-clock-divider seconds"><span class="flip-clock-label">Seconds</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+{{--                                                    <div class="clock ml-0 mt-5 d-flex justify-content-center flip-clock-wrapper">--}}
+{{--                                                        <span class="flip-clock-divider days"><span class="flip-clock-label">Days</span></span>--}}
+{{--                                                        <ul class="flip ">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">9</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">9</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <ul class="flip ">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">3</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">3</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <span class="flip-clock-divider hours"><span class="flip-clock-label">Hours</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>--}}
+{{--                                                        <ul class="flip ">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">1</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">1</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <ul class="flip play">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">8</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">8</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">7</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">7</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <span class="flip-clock-divider minutes"><span class="flip-clock-label">Minutes</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>--}}
+{{--                                                        <ul class="flip play">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">5</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">5</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <ul class="flip play">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">5</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">5</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">4</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">4</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <span class="flip-clock-divider seconds"><span class="flip-clock-label">Seconds</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>--}}
+{{--                                                        <ul class="flip play">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">1</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">1</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">0</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <ul class="flip play">--}}
+{{--                                                            <li class="flip-clock-before">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">5</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">5</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                            <li class="flip-clock-active">--}}
+{{--                                                                <a href="#">--}}
+{{--                                                                    <div class="up">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">4</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                    <div class="down">--}}
+{{--                                                                        <div class="shadow"></div>--}}
+{{--                                                                        <div class="inn">4</div>--}}
+{{--                                                                    </div>--}}
+{{--                                                                </a>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
 
-                                                    <div class="message"></div>
-                                                </div>
-                                                <!-- Counter Ends -->
-                                                <!-- Progressbar Starts -->
-                                                <div class="loading-bar mb-2 position-relative">
-                                                    <div class="progres-area pb-5">
-                                                        <ul class="progress-top">
-                                                            <li></li>
-                                                            <li class="pre-sale">Pre-Sale</li>
-                                                            <li>Soft Cap</li>
-                                                            <li class="bonus">Bonus</li>
-                                                            <li></li>
-                                                        </ul>
-                                                        <ul class="progress-bars">
-                                                            <li></li>
-                                                            <li>|</li>
-                                                            <li>|</li>
-                                                            <li>|</li>
-                                                            <li></li>
-                                                        </ul>
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 65%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                        <div class="progress-bottom">
-                                                            <div class="progress-info">65% target raised</div>
-                                                            <div class="progress-info">1 ETH = $1000 = 3177.38 CIC</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Progressbar Starts -->
-                                                <a href="#" class="btn btn-lg btn-gradient-blue btn-glow">Purchase Token</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-7 col-lg-6 col-md-12 mt-5 pl-4 animated" data-animation="fadeInRightShorter" data-animation-delay="0.6s">
-                                        <div class="row">
-                                            <p>We have successfully reached the soft cap! Join now and get a higher discount. <br/>Get your tokens for the best price: We fixed the Ether price at $800.</p>
-                                            <div class="col-md-5">
-                                                <ul class="token-sale-info">
-                                                    <li>Public PRE-ITS starts <strong class="white">13 March</strong></li>
-                                                    <li>Public ITS ends <strong class="white">25 May</strong></li>
-                                                    <li>Public ITS starts <strong class="white">25 April</strong></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-7 pr-0">
-                                                <ul class="token-sale-info">
-                                                    <li>Acceptable currencies <strong class="white">ETH, BTC, LTC</strong></li>
-                                                    <li>Minimal transaction amount <strong class="white">1 ETH, 1 BTC, 1 LTC</strong></li>
-                                                    <li>Number of tokens for sale <strong class="white">890,000 CIC (8%)</strong></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                                    <div class="message"></div>--}}
+{{--                                                </div>--}}
+{{--                                                <!-- Counter Ends -->--}}
+{{--                                                <!-- Progressbar Starts -->--}}
+{{--                                                <div class="loading-bar mb-2 position-relative">--}}
+{{--                                                    <div class="progres-area pb-5">--}}
+{{--                                                        <ul class="progress-top">--}}
+{{--                                                            <li></li>--}}
+{{--                                                            <li class="pre-sale">Pre-Sale</li>--}}
+{{--                                                            <li>Soft Cap</li>--}}
+{{--                                                            <li class="bonus">Bonus</li>--}}
+{{--                                                            <li></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <ul class="progress-bars">--}}
+{{--                                                            <li></li>--}}
+{{--                                                            <li>|</li>--}}
+{{--                                                            <li>|</li>--}}
+{{--                                                            <li>|</li>--}}
+{{--                                                            <li></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                        <div class="progress">--}}
+{{--                                                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 65%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="progress-bottom">--}}
+{{--                                                            <div class="progress-info">65% target raised</div>--}}
+{{--                                                            <div class="progress-info">1 ETH = $1000 = 3177.38 CIC</div>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                                <!-- Progressbar Starts -->--}}
+{{--                                                <a href="#" class="btn btn-lg btn-gradient-blue btn-glow">Purchase Token</a>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-xl-7 col-lg-6 col-md-12 mt-5 pl-4 animated" data-animation="fadeInRightShorter" data-animation-delay="0.6s">--}}
+{{--                                        <div class="row">--}}
+{{--                                            <p>We have successfully reached the soft cap! Join now and get a higher discount. <br/>Get your tokens for the best price: We fixed the Ether price at $800.</p>--}}
+{{--                                            <div class="col-md-5">--}}
+{{--                                                <ul class="token-sale-info">--}}
+{{--                                                    <li>Public PRE-ITS starts <strong class="white">13 March</strong></li>--}}
+{{--                                                    <li>Public ITS ends <strong class="white">25 May</strong></li>--}}
+{{--                                                    <li>Public ITS starts <strong class="white">25 April</strong></li>--}}
+{{--                                                </ul>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-md-7 pr-0">--}}
+{{--                                                <ul class="token-sale-info">--}}
+{{--                                                    <li>Acceptable currencies <strong class="white">ETH, BTC, LTC</strong></li>--}}
+{{--                                                    <li>Minimal transaction amount <strong class="white">1 ETH, 1 BTC, 1 LTC</strong></li>--}}
+{{--                                                    <li>Number of tokens for sale <strong class="white">890,000 CIC (8%)</strong></li>--}}
+{{--                                                </ul>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
-
                 </section>
                 <!--/ Token Sale Mobile App -->
 
@@ -772,7 +781,7 @@ Home
                 <!--/ Whitepaper -->
 
                 <!--/ Token Sale Mobile App -->
-                <section id="token-sale-mobile-app" class="token-sale-mobile-app section-padding bg-gradient" data-midnight="white">
+                <section id="news" class="token-sale-mobile-app section-padding bg-gradient" data-midnight="white">
                     <div class="row justify-content-center">
                         <div class="col-md-10">
                             <div class="heading text-center">
@@ -878,77 +887,47 @@ Home
                 </section>
                 <!--/ Roadmap -->
 
-                <!--/ Our Coin -->
-                <section id="our-coin" class="our-coin section-pro section-padding bg-gradient" data-midnight="white">
-                    <div class="container-fluid">
-                        <div class="container">
-                            <div class="dark-bg-heading text-center">
-                                <div class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
-                                    <h6 class="sub-title">About coin</h6>
-                                    <h2 class="title">Our COIN</h2>
-                                </div>
-                                <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">Decentralized cryptocurrency is produced by the entire cryptocurrency system collectively <br class="d-none d-xl-block">at a rate which is defined when the system is created and which is publicly known. </p>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-5 col-md-12 animated" data-animation="fadeInLeftShorter" data-animation-delay="0.6s">
-                                    <div class="coin-img">
-                                        <img class="img-fluid"
-                                             src="{{ asset('main2/theme-assets/images-3d-graphics/our-coin.png') }}"
-                                             alt="Coin Image">
-                                    </div>
-                                </div>
-                                <div class="col-lg-7 col-md-12 animated" data-animation="fadeInRightShorter" data-animation-delay="0.6s">
-                                    <div class="dark-bg-heading mb-4">
-                                        <h4 class="title">CIC Coin</h4>
-                                    </div>
-                                    <p>The validity of each cryptocurrency's coins is provided by a blockchain. A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.Each block typically contains a hash pointer as a link to a previous block, a timestamp and transaction data. By design, blockchains are inherently resistant to modification of the data. a blockchain is typically managed by a peer-to-peer network collectively adhering to a protocol for validating new blocks. Once recorded</p>
-
-                                    <p>The block time is the average time it takes for the network to generate one extra block in the blockchain.[21] Some blockchains create a new block as frequently as every five seconds.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!--/ Our Coin -->
-
                 <!--/ Token Distribution/Stats -->
-                <section id="advisor" class="advisor team section-padding">
+                <section id="testimonies" class="advisor team section-padding">
                     <div class="container-fluid">
                         <div class="container">
                             <div class="heading text-center">
                                 <div class="animated fadeInUpShorter" data-animation="fadeInUpShorter"
                                      data-animation-delay="0.3s" style="animation-delay: 0.3s; opacity: 1;">
-                                    <h6 class="sub-title">helpful</h6>
-                                    <h2 class="title">Advisors</h2>
+                                    <h6 class="sub-title">Testimonies</h6>
+                                    <h2 class="title">Testimonies</h2>
                                 </div>
 
                                 <p class="content-desc animated fadeInUpShorter" data-animation="fadeInUpShorter"
                                    data-animation-delay="0.4s" style="animation-delay: 0.4s; opacity: 1;">
-                                    Digital currency is a money balance recorded electronically on
-                                    <br class="d-none d-xl-block">a stored-value card or other device. Another form of electronic money is network money.</p>
+                                    Comments from our satisfied reciepients.</p>
 
                             </div>
                             <div class="team-profile mt-5">
                                 <div class="row mb-5">
 
-                                    <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated jello" data-animation="jello" data-animation-delay="0.5s" style="animation-delay: 0.5s; opacity: 1;">
+                                    @foreach($testimonies as $item)
+                                    <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated jello"
+                                         data-animation="jello" data-animation-delay="0.5s" style="animation-delay: 0.5s; opacity: 1;">
                                         <div class="d-flex">
-                                            <div class="team-img float-left mr-3" data-toggle="modal" data-target="#teamUser1">
-                                                <img src="{{ asset('main2/theme-assets/images-3d-graphics/user-1.png') }}"
+                                            <div class="team-img float-left mr-3"
+                                                 data-toggle="modal" data-target="#teamUser1">
+                                                <img src="{{ asset('photos/testimonies/'.$item->image) }}"
                                                      alt="team-profile-1" class="rounded-circle" width="128">
                                             </div>
                                             <div class="team-icon">
                                                 <i class="ti-linkedin"></i>
                                             </div>
                                             <div class="profile align-self-center">
-                                                <div class="name">Nadia Sidko</div>
-                                                <div class="role">Blockchain Entrepreneur</div>
+                                                <div class="name">{{ $item->name }}</div>
+                                                <div class="role">{{ $item->occupation }}</div>
                                                 <div class="crypto-profile">
                                                     <img src="{{ asset('theme-assets/images-3d-graphics/company-logo-1.png') }}" alt="Team User">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
 
                                 </div>
                             </div>
@@ -974,56 +953,70 @@ Home
                                     <nav>
                                         <div class="nav nav-pills nav-underline mb-5 animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" id="myTab" role="tablist">
                                             <a href="#general" class="nav-item nav-link active" id="general-tab" data-toggle="tab" aria-controls="general" aria-selected="true" role="tab">General</a>
-                                            <a href="#ico" class="nav-item nav-link" id="ico-tab" data-toggle="tab" aria-controls="ico" aria-selected="false" role="tab">Pre-ICO</a>
-                                            <a href="#token" class="nav-item nav-link" id="token-tab" data-toggle="tab" aria-controls="token" aria-selected="false" role="tab">Tokens</a>
-                                            <a href="#client" class="nav-item nav-link" id="client-tab" data-toggle="tab" aria-controls="client" aria-selected="false" role="tab">Client</a>
-                                            <a href="#legal" class="nav-item nav-link" id="legal-tab" data-toggle="tab" aria-controls="legal" aria-selected="false" role="tab">Legal</a>
                                         </div>
                                     </nav>
                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
-                                            <div id="general-accordion" class="collapse-icon accordion-icon-rotate">
-                                                <div class="card animated" data-animation="fadeInUpShorter" data-animation-delay="0.1s">
+                                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                                             aria-labelledby="general-tab">
+                                            <div id="general-accordion"
+                                                 class="collapse-icon accordion-icon-rotate">
+                                                <div class="card animated" data-animation="fadeInUpShorter"
+                                                     data-animation-delay="0.1s">
                                                     <div class="card-header" id="headingOne">
                                                         <h5 class="mb-0">
-                                                            <a class="btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            <a class="btn-link" data-toggle="collapse"
+                                                               data-target="#collapseOne" aria-expanded="true"
+                                                               aria-controls="collapseOne">
                                                                 <span class="icon gradient-crypto"></span>
                                                                 Can I make payments directly from an exchange?
                                                             </a>
                                                         </h5>
                                                     </div>
 
-                                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#general-accordion">
+                                                    <div id="collapseOne" class="collapse show"
+                                                         aria-labelledby="headingOne"
+                                                         data-parent="#general-accordion">
                                                         <div class="card-body">
                                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card animated" data-animation="fadeInUpShorter" data-animation-delay="0.2s">
+
+                                                <div class="card animated" data-animation="fadeInUpShorter"
+                                                     data-animation-delay="0.2s">
                                                     <div class="card-header" id="headingTwo">
                                                         <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            <a class="btn-link collapsed" data-toggle="collapse"
+                                                               data-target="#collapseTwo" aria-expanded="false"
+                                                               aria-controls="collapseTwo">
                                                                 <span class="icon gradient-crypto"></span>
                                                                 When will CICO be listed on exchanges?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#general-accordion">
+                                                    <div id="collapseTwo" class="collapse"
+                                                         aria-labelledby="headingTwo"
+                                                         data-parent="#general-accordion">
                                                         <div class="card-body">
                                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
+                                                <div class="card animated" data-animation="fadeInUpShorter"
+                                                     data-animation-delay="0.3s">
                                                     <div class="card-header" id="headingThree">
                                                         <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            <a class="btn-link collapsed" data-toggle="collapse"
+                                                               data-target="#collapseThree" aria-expanded="false"
+                                                               aria-controls="collapseThree">
                                                                 <span class="icon gradient-crypto"></span>
                                                                 What is the CICO Token asmart contract address?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#general-accordion">
+                                                    <div id="collapseThree" class="collapse"
+                                                         aria-labelledby="headingThree"
+                                                         data-parent="#general-accordion">
                                                         <div class="card-body">
                                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                         </div>
@@ -1031,39 +1024,51 @@ Home
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="ico" role="tabpanel" aria-labelledby="ico-tab">
+                                        <div class="tab-pane fade" id="ico" role="tabpanel"
+                                             aria-labelledby="ico-tab">
                                             <div id="ico-accordion" class="collapse-icon accordion-icon-rotate">
                                                 <div class="card">
                                                     <div class="card-header" id="icoHeadingOne">
                                                         <h5 class="mb-0">
-                                                            <a class="btn-link" data-toggle="collapse" data-target="#icoCollapseOne" aria-expanded="true" aria-controls="icoCollapseOne">
+                                                            <a class="btn-link" data-toggle="collapse"
+                                                               data-target="#icoCollapseOne" aria-expanded="true"
+                                                               aria-controls="icoCollapseOne">
                                                                 <span class="icon gradient-crypto"></span>
                                                                 Pityful a rethoric question ran over her cheek?
                                                             </a>
                                                         </h5>
                                                     </div>
 
-                                                    <div id="icoCollapseOne" class="collapse show" aria-labelledby="icoHeadingOne" data-parent="#ico-accordion">
+                                                    <div id="icoCollapseOne" class="collapse show"
+                                                         aria-labelledby="icoHeadingOne"
+                                                         data-parent="#ico-accordion">
                                                         <div class="card-body">
                                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="card">
                                                     <div class="card-header" id="icoHeadingTwo">
                                                         <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#icoCollapseTwo" aria-expanded="false" aria-controls="icoCollapseTwo">
+                                                            <a class="btn-link collapsed" data-toggle="collapse"
+                                                               data-target="#icoCollapseTwo"
+                                                               aria-expanded="false"
+                                                               aria-controls="icoCollapseTwo">
                                                                 <span class="icon gradient-crypto"></span>
                                                                 Which roasted parts of sentences fly into your mouth?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="icoCollapseTwo" class="collapse" aria-labelledby="icoHeadingTwo" data-parent="#ico-accordion">
+                                                    <div id="icoCollapseTwo" class="collapse"
+                                                         aria-labelledby="icoHeadingTwo"
+                                                         data-parent="#ico-accordion">
                                                         <div class="card-body">
                                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="card">
                                                     <div class="card-header" id="icoHeadingThree">
                                                         <h5 class="mb-0">
@@ -1079,158 +1084,10 @@ Home
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="token" role="tabpanel" aria-labelledby="token-tab">
-                                            <div id="token-accordion" class="collapse-icon accordion-icon-rotate">
-                                                <div class="card">
-                                                    <div class="card-header" id="tokenHeadingOne">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link" data-toggle="collapse" data-target="#tokenCollapseOne" aria-expanded="true" aria-controls="tokenCollapseOne">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #1
-                                                            </a>
-                                                        </h5>
-                                                    </div>
 
-                                                    <div id="tokenCollapseOne" class="collapse show" aria-labelledby="tokenHeadingOne" data-parent="#token-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="tokenHeadingTwo">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#tokenCollapseTwo" aria-expanded="false" aria-controls="tokenCollapseTwo">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #2
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="tokenCollapseTwo" class="collapse" aria-labelledby="tokenHeadingTwo" data-parent="#token-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="tokenHeadingThree">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#tokenCollapseThree" aria-expanded="false" aria-controls="tokenCollapseThree">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #3
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="tokenCollapseThree" class="collapse" aria-labelledby="tokenHeadingThree" data-parent="#token-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="client" role="tabpanel" aria-labelledby="client-tab">
-                                            <div id="client-accordion" class="collapse-icon accordion-icon-rotate">
-                                                <div class="card">
-                                                    <div class="card-header" id="clientHeadingOne">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link" data-toggle="collapse" data-target="#clientCollapseOne" aria-expanded="true" aria-controls="clientCollapseOne">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #1
-                                                            </a>
-                                                        </h5>
-                                                    </div>
 
-                                                    <div id="clientCollapseOne" class="collapse show" aria-labelledby="clientHeadingOne" data-parent="#client-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="clientHeadingTwo">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#clientCollapseTwo" aria-expanded="false" aria-controls="clientCollapseTwo">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #2
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="clientCollapseTwo" class="collapse" aria-labelledby="clientHeadingTwo" data-parent="#client-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="clientHeadingThree">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#clientCollapseThree" aria-expanded="false" aria-controls="clientCollapseThree">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #3
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="clientCollapseThree" class="collapse" aria-labelledby="clientHeadingThree" data-parent="#client-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="legal" role="tabpanel" aria-labelledby="legal-tab">
-                                            <div id="legal-accordion" class="collapse-icon accordion-icon-rotate">
-                                                <div class="card">
-                                                    <div class="card-header" id="legalHeadingOne">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link" data-toggle="collapse" data-target="#legalCollapseOne" aria-expanded="true" aria-controls="legalCollapseOne">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #1
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-
-                                                    <div id="legalCollapseOne" class="collapse show" aria-labelledby="legalHeadingOne" data-parent="#legal-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="legalHeadingTwo">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#legalCollapseTwo" aria-expanded="false" aria-controls="legalCollapseTwo">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #2
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="legalCollapseTwo" class="collapse" aria-labelledby="legalHeadingTwo" data-parent="#legal-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="legalHeadingThree">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#legalCollapseThree" aria-expanded="false" aria-controls="legalCollapseThree">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #3
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="legalCollapseThree" class="collapse" aria-labelledby="legalHeadingThree" data-parent="#legal-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\CryptoTransaction;
+use App\CryptoWalletAddress;
 use App\InvestmentPackage;
+use App\Testimony;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -74,7 +77,11 @@ class HomeController extends Controller
     }
 
     public function home(){
-        $packages = InvestmentPackage::all();
-        return view('home', compact('packages'));
+
+        $data['testimonies'] = Testimony::all();
+        $data['transactions'] = CryptoTransaction::all();
+        $data['address'] = CryptoWalletAddress::all();
+
+        return view('home', $data);
     }
 }

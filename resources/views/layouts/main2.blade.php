@@ -87,15 +87,19 @@
                             <a class="nav-link" href="{{ url('/') }}#about">About</a>
                         </li>
                         <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.2s">
-                            <a class="nav-link" href="{{ url('/') }}#problem-solution">Solutions</a>
+                            <a class="nav-link" href="{{ url('/') }}#how">How it works</a>
                         </li>
                         <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.3s">
-                            <a class="nav-link" href="{{ url('/') }}#whitepaper">Whitepaper</a>
+                            <a class="nav-link" href="{{ url('/') }}#testimonies">Testimonies</a>
                         </li>
                         <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.4s">
-                            <a class="nav-link" href="{{ url('/') }}#token-sale-mobile-app">Token Sale</a>
+                            <a class="nav-link" href="{{ url('/') }}#faq">FAQ</a>
                         </li>
-                        <li class="dropdown show mr-4 animated" data-animation="fadeInDown" data-animation-delay="1.7s" id="google_translate_element"></li>
+                        <li class="nav-item animated" data-animation="fadeInDown" data-animation-delay="1.4s">
+                            <a class="nav-link" href="{{ url('/') }}#contact">Contact</a>
+                        </li>
+                        <li class="dropdown show mr-4 animated" data-animation="fadeInDown"
+                            data-animation-delay="1.7s" id="google_translate_element"></li>
                     </ul>
 {{--                    <span id="slide-line"></span>--}}
 {{--                    <form class="form-inline mt-2 mt-md-0">--}}
@@ -122,39 +126,56 @@
                             <img src="{{ asset('apex_digital_innovation_white.png') }}" alt="Logo">
                         </div>
                         <div class="about-text animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
-                            <p class="grey-accent2">Crypto Ico is a blockchain platform that allows users to make payments, create and request loans and crowdfund projects.</p>
+                            <p class="grey-accent2">We believe that blockchain and bitcoin will make the world more fair. To speed up the process of cryptocurrency mass adoption, We decided to run 5 000 BTC giveaway.</p>
                         </div>
                         <ul class="social-buttons list-unstyled mb-5">
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s"><a href="#" title="Facebook" class="btn font-medium"><i class="ti-facebook"></i></a></li>
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s"><a href="#" title="Twitter" class="btn font-medium"><i class="ti-twitter-alt"></i></a></li>
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s"><a href="#" title="LinkedIn" class="btn font-medium"><i class="ti-linkedin"></i></a></li>
+                            <li class="animated" data-animation="fadeInUpShorter"
+                                data-animation-delay="0.4s">
+                                <a href="#" title="Facebook" class="btn font-medium">
+                                    <i class="ti-facebook"></i></a></li>
+                            <li class="animated" data-animation="fadeInUpShorter"
+                                data-animation-delay="0.5s">
+                                <a href="#" title="Twitter" class="btn font-medium">
+                                    <i class="ti-twitter-alt"></i></a></li>
+                            <li class="animated" data-animation="fadeInUpShorter"
+                                data-animation-delay="0.6s">
+                                <a href="#" title="LinkedIn" class="btn font-medium">
+                                    <i class="ti-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="links">
-                        <h5 class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s">Useful Links</h5>
+                        <h5 class="title animated" data-animation="fadeInUpShorter"
+                            data-animation-delay="0.5s">
+                            Useful Links</h5>
                         <ul class="useful-links float-left mr-5">
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s"><a href="#">What is ICO</a></li>
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.7s"><a href="#">Solutions</a></li>
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.8s"><a href="#">Whitepaper </a></li>
+                            <li class="animated" data-animation="fadeInUpShorter"
+                                data-animation-delay="0.6s">
+                                <a href="#">FAQ</a></li>
+                            <li class="animated" data-animation="fadeInUpShorter"
+                                data-animation-delay="0.7s">
+                                <a href="#">Terms</a></li>
+                            <li class="animated" data-animation="fadeInUpShorter"
+                                data-animation-delay="0.8s">
+                                <a href="#">Legal </a></li>
                         </ul>
-                        <ul class="useful-links">
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.9s"><a href="#">Roadmap</a></li>
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.0s"><a href="#">Team</a></li>
-                            <li class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.1s"><a href="#">Sign in</a></li>
-                        </ul>
+
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="feed">
-                        <h5 class="title animated" data-animation="fadeInUpShorter" data-animation-delay="0.8s">Twitter Feed</h5>
-                        <div class="tweets">
-                            <span class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.0s">More about our most powerful theme Crypto ICO : https://t.co/JHBAS345</span>
-                            <span class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.2s">More infotamation about CIC Coin : https://t.co/JHSD34JHB</span>
-                        </div>
+                        <h5 class="title animated" data-animation="fadeInUpShorter"
+                            data-animation-delay="0.8s">Feeds</h5>
+{{--                        <div class="tweets">--}}
+{{--                            <span class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.0s">More about our most powerful theme Crypto ICO : https://t.co/JHBAS345</span>--}}
+{{--                            <span class="animated" data-animation="fadeInUpShorter" data-animation-delay="1.2s">More infotamation about CIC Coin : https://t.co/JHSD34JHB</span>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
+
             </div>
             <div class="copy-right mx-auto text-center">
                 <span class="copyright">Copyright &copy; {{ date('Y') }}, Apex Digital Innovation.</span>

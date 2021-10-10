@@ -54,6 +54,21 @@
                 <ul id="iq-sidebar-toggle" class="iq-menu">
                     <li><a href="{{ route('admin-dashboard') }}" class="iq-waves-effect">
                         <i class="las la-dashboard iq-arrow-left"></i><span>Dashboard</span></a></li>
+                    <li>
+                        <a href="{{ route('admin.giveaway.crypto-wallet-address.index') }}"
+                           class="iq-waves-effect"><i class="las la-dashboard iq-arrow-left"></i>
+                            <span>Crypto Wallet Address</span></a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.giveaway.transactions.index') }}"
+                           class="iq-waves-effect"><i class="las la-dashboard iq-arrow-left"></i>
+                            <span>Crypto Transactions</span></a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.giveaway.testimonies.index') }}"
+                           class="iq-waves-effect"><i class="las la-dashboard iq-arrow-left"></i>
+                            <span>Testimonies</span></a>
+                    </li>
 {{--                    <li><a href="{{ route('manage-users') }}" class="iq-waves-effect">--}}
 {{--                        <i class="las la-user iq-arrow-left"></i><span>Manage Users</span></a></li>--}}
 {{--                    <li><a href="{{ route('manage-investments') }}" class="iq-waves-effect">--}}
@@ -93,13 +108,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-list">
 
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin-dashboard') }}"><span>Dashboard</span></a></li>
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('manage-users') }}"><span>Manage Users</span></a></li>
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('manage-investments') }}"><span>Manage Investments</span></a></li>
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('withdrawal-requests') }}"><span>Withdrawal Requests</span></a></li>
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('investments-packages.index') }}"><span>Investment Packages</span></a></li>
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.account-settings') }}"><span>Account Settings</span></a></li>
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin-logout') }}"><span>Logout</span></a></li>
+                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin-dashboard') }}">
+                                <span>Dashboard</span></a></li>
+                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.giveaway.crypto-wallet-address.index') }}">
+                                <span>Crypto Wallet Address</span></a></li>
+                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.giveaway.transactions.index') }}">
+                                <span>Crypto Transactions</span></a></li>
+                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.giveaway.testimonies.index') }}">
+                                <span>Testimonies</span></a></li>
+                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.account-settings') }}">
+                                <span>Account Settings</span></a></li>
+                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin-logout') }}">
+                                <span>Logout</span></a></li>
 
                         <li id="google_translate_element" class="nav-item"></li>
 

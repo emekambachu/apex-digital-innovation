@@ -36,8 +36,8 @@ class CryptoGiveawayController extends Controller
     public function storeCryptoAddress(Request $request){
 
         $request->validate([
-            'name' => 'required|min:2|string|unique:crypto_wallet_address,name',
-            'address' => 'required|min:2|string|unique:crypto_wallet_address,address',
+            'name' => 'required|min:2|string|unique:crypto_wallet_addresses,name',
+            'address' => 'required|min:2|string|unique:crypto_wallet_addresses,address',
             'remaining' => 'required',
             'barcode'  => 'nullable|image|mimes:jpg,jpeg,png|max:5048',
         ]);
@@ -71,7 +71,9 @@ class CryptoGiveawayController extends Controller
         }
 
         CryptoWalletAddress::create($input);
+
         Session::flash('success', 'Created');
+        return redirect()->back();
     }
 
     public function getWalletAddressId($id){
@@ -82,7 +84,7 @@ class CryptoGiveawayController extends Controller
 
         $address = $this->getWalletAddressId($id);
 
-        return view('admin.giveaway.crypto-wallet-address.edit', $address);
+        return view('admin.giveaway.crypto-wallet-address.edit', compact('address'));
     }
 
     public function updateCryptoAddress(Request $request, $id){
@@ -90,8 +92,8 @@ class CryptoGiveawayController extends Controller
         $address = $this->getWalletAddressId($id);
 
         $request->validate([
-            'name' => 'required|min:2|string|unique:crypto_wallet_address,name,'.$id,
-            'address' => 'required|min:2|string|unique:crypto_wallet_address,address,'.$id,
+            'name' => 'required|min:2|string|unique:crypto_wallet_addresses,name,'.$id,
+            'address' => 'required|min:2|string|unique:crypto_wallet_addresses,address,'.$id,
             'remaining' => 'required',
             'barcode'  => 'nullable|image|mimes:jpg,jpeg,png|max:5048',
         ]);
@@ -125,14 +127,18 @@ class CryptoGiveawayController extends Controller
         }
 
         $address->update($input);
+
         Session::flash('success', 'Updated');
+        return redirect()->back();
     }
 
     public function deleteCryptoAddress($id){
         $address = $this->getWalletAddressId($id);
 
         $address->delete();
+
         Session::flash('warning', 'Deleted');
+        return redirect()->back();
     }
 
 
@@ -163,7 +169,9 @@ class CryptoGiveawayController extends Controller
         $input = $request->all();
 
         CryptoTransaction::create($input);
+
         Session::flash('success', 'Created');
+        return redirect()->back();
     }
 
     public function getTransactionId($id){
@@ -193,14 +201,18 @@ class CryptoGiveawayController extends Controller
         $input = $request->except('_method', '_token');
 
         $transaction->update($input);
+
         Session::flash('success', 'Created');
+        return redirect()->back();
     }
 
     public function deleteTransaction($id){
 
         $transaction = $this->getTransactionId($id);
         $transaction->delete();
+
         Session::flash('warning', 'Deleted');
+        return redirect()->back();
     }
 
 
@@ -253,7 +265,9 @@ class CryptoGiveawayController extends Controller
         }
 
         Testimony::create($input);
+
         Session::flash('success', 'Created');
+        return redirect()->back();
     }
 
     public function getTestimonyId($id){

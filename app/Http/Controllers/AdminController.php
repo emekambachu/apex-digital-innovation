@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Admin;
 use App\AdminWalletAddress;
+use App\CryptoTransaction;
+use App\CryptoWalletAddress;
 use App\Investment;
 use App\InvestmentPackage;
+use App\Testimony;
 use App\Transaction;
 use App\User;
 use App\Wallet;
@@ -40,11 +43,11 @@ class AdminController extends Controller
             return redirect()->route('admin-login');
         }
 
-        $users = User::all();
-        $approvedInvestments = Investment::where('is_approved', True)->get();
-        $pendingInvestments = Investment::where('is_approved', False)->get();
+        $data['transactions'] = CryptoTransaction::limit(10)->get();
+        $data['address'] = CryptoWalletAddress::limit(10)->get();
+        $data['testimonies'] = Testimony::limit(10)->get();
 
-        return view('admin.index', compact('users', 'approvedInvestments', 'pendingInvestments'));
+        return view('admin.index', $data);
     }
 
     public function manageUsers(){
