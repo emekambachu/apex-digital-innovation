@@ -479,7 +479,7 @@ Home
                                                     {{ $item->txhash }}
                                                 </p>
                                             </div>
-                                            <div class="col-md-2 animated">
+                                            <div class="col-md-1 animated">
                                                 <p class="text-center text-dark">
                                                     <strong style="color: #6a04a0;">BLOCK</strong><br>
                                                     {{ $item->block }}
@@ -497,19 +497,19 @@ Home
                                                     {{ $item->to }}
                                                 </p>
                                             </div>
-                                            <div class="col-md-2 animated">
+                                            <div class="col-md-1 animated">
                                                 <p class="text-center text-dark">
                                                     <strong style="color: #6a04a0;">AGE</strong><br>
                                                     {{ $item->age }}
                                                 </p>
                                             </div>
-                                            <div class="col-md-1 animated">
+                                            <div class="col-md-2 animated">
                                                 <p class="text-center text-dark">
                                                     <strong style="color: #6a04a0;">VALUE</strong><br>
                                                     {{ $item->value }}
                                                 </p>
                                             </div>
-                                            <div class="col-md-1 animated">
+                                            <div class="col-md-2 animated">
                                                 <p class="text-center text-dark">
                                                     <strong style="color: #6a04a0;">TXFEE</strong><br>
                                                     {{ $item->txfee }}
