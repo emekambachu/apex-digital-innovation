@@ -25,8 +25,11 @@ Home
                                                 data-animation-delay="1.6s">
                                                 Tesla marketing devs has prepared a special giveaway for all our fans and the crypto community.</h3>
                                             <div class="mt-5">
-                                                <a href="#token-sale-mobile-app" class="btn btn-lg btn-gradient-purple btn-glow mr-2 animated" data-animation="fadeInUpShorter" data-animation-delay="1.7s">Purchase Token</a>
-                                                <a href="#whitepaper" class="btn btn-lg btn-gradient-purple btn-glow animated" data-animation="fadeInUpShorter" data-animation-delay="1.8s">Whitepaper</a>
+                                                <a href="#crypto-offer"
+                                                   class="btn btn-lg btn-gradient-purple btn-glow mr-2 animated"
+                                                   data-animation="fadeInUpShorter"
+                                                   data-animation-delay="1.7s">Claim Crypto Offer</a>
+                                                <a href="#contact" class="btn btn-lg btn-gradient-purple btn-glow animated" data-animation="fadeInUpShorter" data-animation-delay="1.8s">Contact us</a>
                                             </div>
                                         </div>
                                     </div>
@@ -159,7 +162,7 @@ Home
                 <!--/ Problems & Solutions -->
 
                 <!--/ Token Sale Mobile App -->
-                <section class="token-sale-mobile-app section-padding bg-gradient" data-midnight="white">
+                <section class="crypto-offer section-padding bg-gradient" data-midnight="white">
                     <div class="token-sale">
                         <div class="container-fluid">
                             <div class="container">
