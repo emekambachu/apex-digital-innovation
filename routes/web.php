@@ -89,7 +89,7 @@ Route::post('user/withdraw/balance/submit', [UserController::class, 'withdrawBal
 
 // Admin Section
 // Login Page
-Route::get('admin-login', 'Auth\AdminLoginController@showLoginForm')->name('admin-login');
+Route::get('admin-login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 
 // Submit Login
 Route::post('admin-login', ['as'=>'admin-login','uses'=>'Auth\AdminLoginController@login']);

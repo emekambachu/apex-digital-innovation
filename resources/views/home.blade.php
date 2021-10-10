@@ -433,7 +433,9 @@ Home
                                                         </ul>
                                                         <div class="progress">
                                                             <div class="progress-bar progress-bar-custom" role="progressbar"
-                                                                 style="width: {{ $item->remaining }}%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                 style="width: {{ $item->remaining }}%;"
+                                                                 aria-valuenow="100" aria-valuemin="0"
+                                                                 aria-valuemax="100"></div>
                                                         </div>
                                                         <div class="progress-bottom">
                                                             <div class="progress-info">{{ $item->remaining }}% target raised</div>
@@ -460,286 +462,65 @@ Home
                                 </div>
                                 @endforeach
 
-{{--                                <div class="row align-items-center">--}}
-{{--                                    <div class="col-xl-5 col-lg-6 col-md-12 animated"--}}
-{{--                                         data-animation="fadeInLeftShorter" data-animation-delay="0.6s">--}}
-{{--                                        <div class="token-sale-counter">--}}
+                                <div class="row align-items-center mt-5">
+                                    <div class="col-lg-12 col-md-12 animated"
+                                         data-animation="fadeInLeftShorter" data-animation-delay="0.6s">
+                                        <div class="dark-bg-heading text-center">
+                                            <h6 class="sub-title">Transactions</h6>
+                                            <h2 class="title">Transactions</h2>
+                                        </div>
 
-{{--                                            <h5>Bitcoin</h5>--}}
-{{--                                            <div class="token-details text-center">--}}
-{{--                                                <!-- Counter Starts-->--}}
-{{--                                                <div class="clock-counter mb-4">--}}
+                                        @foreach($transactions as $item)
+                                        <div class="row align-items-center text-dark pt-3"
+                                             style="border-radius: 5px; background-color: #bad1fc;">
+                                            <div class="col-md-2 animated">
+                                                <p class="text-center text-dark">
+                                                    <strong style="color: #6a04a0;">TXHASH</strong><br>
+                                                    {{ $item->txhash }}
+                                                </p>
+                                            </div>
+                                            <div class="col-md-2 animated">
+                                                <p class="text-center text-dark">
+                                                    <strong style="color: #6a04a0;">BLOCK</strong><br>
+                                                    {{ $item->block }}
+                                                </p>
+                                            </div>
+                                            <div class="col-md-2 animated">
+                                                <p class="text-center text-dark">
+                                                    <strong style="color: #6a04a0;">FROM</strong><br>
+                                                    {{ $item->from }}
+                                                </p>
+                                            </div>
+                                            <div class="col-md-2 animated">
+                                                <p class="text-center text-dark">
+                                                    <strong style="color: #6a04a0;">TO</strong><br>
+                                                    {{ $item->to }}
+                                                </p>
+                                            </div>
+                                            <div class="col-md-2 animated">
+                                                <p class="text-center text-dark">
+                                                    <strong style="color: #6a04a0;">AGE</strong><br>
+                                                    {{ $item->age }}
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 animated">
+                                                <p class="text-center text-dark">
+                                                    <strong style="color: #6a04a0;">VALUE</strong><br>
+                                                    {{ $item->value }}
+                                                </p>
+                                            </div>
+                                            <div class="col-md-1 animated">
+                                                <p class="text-center text-dark">
+                                                    <strong style="color: #6a04a0;">TXFEE</strong><br>
+                                                    {{ $item->txfee }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        @endforeach
 
+                                    </div>
+                                </div>
 
-{{--                                                    <div class="clock ml-0 mt-5 d-flex justify-content-center flip-clock-wrapper">--}}
-{{--                                                        <span class="flip-clock-divider days"><span class="flip-clock-label">Days</span></span>--}}
-{{--                                                        <ul class="flip ">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">9</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">9</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <ul class="flip ">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">3</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">3</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <span class="flip-clock-divider hours"><span class="flip-clock-label">Hours</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>--}}
-{{--                                                        <ul class="flip ">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">1</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">1</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <ul class="flip play">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">8</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">8</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">7</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">7</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <span class="flip-clock-divider minutes"><span class="flip-clock-label">Minutes</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>--}}
-{{--                                                        <ul class="flip play">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">5</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">5</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <ul class="flip play">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">5</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">5</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">4</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">4</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <span class="flip-clock-divider seconds"><span class="flip-clock-label">Seconds</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>--}}
-{{--                                                        <ul class="flip play">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">1</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">1</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">0</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <ul class="flip play">--}}
-{{--                                                            <li class="flip-clock-before">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">5</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">5</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                            <li class="flip-clock-active">--}}
-{{--                                                                <a href="#">--}}
-{{--                                                                    <div class="up">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">4</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="down">--}}
-{{--                                                                        <div class="shadow"></div>--}}
-{{--                                                                        <div class="inn">4</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </a>--}}
-{{--                                                            </li>--}}
-{{--                                                        </ul>--}}
-{{--                                                    </div>--}}
-
-{{--                                                    <div class="message"></div>--}}
-{{--                                                </div>--}}
-{{--                                                <!-- Counter Ends -->--}}
-{{--                                                <!-- Progressbar Starts -->--}}
-{{--                                                <div class="loading-bar mb-2 position-relative">--}}
-{{--                                                    <div class="progres-area pb-5">--}}
-{{--                                                        <ul class="progress-top">--}}
-{{--                                                            <li></li>--}}
-{{--                                                            <li class="pre-sale">Pre-Sale</li>--}}
-{{--                                                            <li>Soft Cap</li>--}}
-{{--                                                            <li class="bonus">Bonus</li>--}}
-{{--                                                            <li></li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <ul class="progress-bars">--}}
-{{--                                                            <li></li>--}}
-{{--                                                            <li>|</li>--}}
-{{--                                                            <li>|</li>--}}
-{{--                                                            <li>|</li>--}}
-{{--                                                            <li></li>--}}
-{{--                                                        </ul>--}}
-{{--                                                        <div class="progress">--}}
-{{--                                                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 65%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="progress-bottom">--}}
-{{--                                                            <div class="progress-info">65% target raised</div>--}}
-{{--                                                            <div class="progress-info">1 ETH = $1000 = 3177.38 CIC</div>--}}
-{{--                                                        </div>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <!-- Progressbar Starts -->--}}
-{{--                                                <a href="#" class="btn btn-lg btn-gradient-blue btn-glow">Purchase Token</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="col-xl-7 col-lg-6 col-md-12 mt-5 pl-4 animated" data-animation="fadeInRightShorter" data-animation-delay="0.6s">--}}
-{{--                                        <div class="row">--}}
-{{--                                            <p>We have successfully reached the soft cap! Join now and get a higher discount. <br/>Get your tokens for the best price: We fixed the Ether price at $800.</p>--}}
-{{--                                            <div class="col-md-5">--}}
-{{--                                                <ul class="token-sale-info">--}}
-{{--                                                    <li>Public PRE-ITS starts <strong class="white">13 March</strong></li>--}}
-{{--                                                    <li>Public ITS ends <strong class="white">25 May</strong></li>--}}
-{{--                                                    <li>Public ITS starts <strong class="white">25 April</strong></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-md-7 pr-0">--}}
-{{--                                                <ul class="token-sale-info">--}}
-{{--                                                    <li>Acceptable currencies <strong class="white">ETH, BTC, LTC</strong></li>--}}
-{{--                                                    <li>Minimal transaction amount <strong class="white">1 ETH, 1 BTC, 1 LTC</strong></li>--}}
-{{--                                                    <li>Number of tokens for sale <strong class="white">890,000 CIC (8%)</strong></li>--}}
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -808,7 +589,8 @@ Home
                                     <h2 class="title">Roadmap</h2>
                                 </div>
 
-                                <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">This is a list of cryptocurrencies. The number of cryptocurrencies available over <br class="d-none d-xl-block">the internet as of 7 January 2018 is over 1384 and growing.</p>
+                                <p class="content-desc animated" data-animation="fadeInUpShorter"
+                                   data-animation-delay="0.4s">This is a list of cryptocurrencies. The number of cryptocurrencies available over <br class="d-none d-xl-block">the internet as of 7 January 2018 is over 1384 and growing.</p>
                             </div>
                             <div class="row animated" data-animation="fadeInUpShorter" data-animation-delay="0.6s">
                                 <div class="col-12">
