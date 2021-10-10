@@ -180,7 +180,7 @@ Home
                                          data-animation="fadeInLeftShorter" data-animation-delay="0.6s">
                                         <div class="token-sale-counter">
 
-                                            <h5>{{ $item->name }}</h5>
+                                            <h4 class="text-white">{{ $item->name }}</h4>
                                             <div class="token-details text-center">
                                                 <!-- Counter Starts-->
                                                 <div class="clock-counter mb-4">
@@ -924,9 +924,7 @@ Home
                                             <div class="profile align-self-center">
                                                 <div class="name">{{ $item->name }}</div>
                                                 <div class="role">{{ $item->occupation }}</div>
-                                                <div class="crypto-profile">
-                                                    <img src="{{ asset('theme-assets/images-3d-graphics/company-logo-1.png') }}" alt="Team User">
-                                                </div>
+                                                <div class="role"><i>{{ $item->testimony }}</i></div>
                                             </div>
                                         </div>
                                     </div>
