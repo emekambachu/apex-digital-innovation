@@ -1,7 +1,7 @@
 $(function(){
 
     // assign variable to interval and store in intervals array
-    let intervalId = setInterval(autoLoad, 20000);
+    let intervalId = setInterval(autoLoad, 3000);
     intervals.push(intervalId);
     console.log(intervals);
 
@@ -32,22 +32,26 @@ $(function(){
                             '             style="border-radius: 5px; background-color: #bad1fc;">\n' +
                             '               <div class="col-md-2 animated">\n' +
                             '                   <p class="text-center text-dark">\n' +
-                            '                   <strong style="color: #6a04a0;">TXHASH</strong><br>\n' + v.txhash +
+                            '                   <strong style="color: #6a04a0;">TXHASH</strong><br>\n' +
+                                                    v.txhash.substr(0, 20) + '&hellip;' +
                             '                    </p>\n' +
                             '                  </div>\n' +
                             '                 <div class="col-md-1 animated">\n' +
                             '                  <p class="text-center text-dark">\n' +
-                            '                   <strong style="color: #6a04a0;">BLOCK</strong><br>\n' + v.block +
+                            '                   <strong style="color: #6a04a0;">BLOCK</strong><br>\n' +
+                                                    v.block.substr(0, 20) + '&hellip;' +
                             '                  </p>\n' +
                             '                 </div>\n' +
                             '             <div class="col-md-2 animated">\n' +
                             '            <p class="text-center text-dark">\n' +
-                            '            <strong style="color: #6a04a0;">FROM</strong><br>\n' + v.from +
+                            '            <strong style="color: #6a04a0;">FROM</strong><br>\n' +
+                                            v.from.substr(0, 20) + '&hellip;' +
                             '            </p>\n' +
                             '             </div>\n' +
                             '             <div class="col-md-2 animated">\n' +
                             '             <p class="text-center text-dark">\n' +
-                            '             <strong style="color: #6a04a0;">TO</strong><br>\n' + v.to +
+                            '             <strong style="color: #6a04a0;">TO</strong><br>\n' +
+                                            v.to.substr(0, 20) + '&hellip;' +
                             '                     </p>\n' +
                             '                    </div>\n' +
                             '              <div class="col-md-1 animated">\n' +
