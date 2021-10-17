@@ -33,25 +33,25 @@ $(function(){
                             '               <div class="col-md-2 animated">\n' +
                             '                   <p class="text-center text-dark">\n' +
                             '                   <strong style="color: #6a04a0;">TXHASH</strong><br>\n' +
-                                                    v.txhash.substr(0, 20) + '&hellip;' +
+                                                    v.txhash.substr(0, 10) + '&hellip;' +
                             '                    </p>\n' +
                             '                  </div>\n' +
                             '                 <div class="col-md-1 animated">\n' +
                             '                  <p class="text-center text-dark">\n' +
                             '                   <strong style="color: #6a04a0;">BLOCK</strong><br>\n' +
-                                                    v.block.substr(0, 20) + '&hellip;' +
+                                                    v.block +
                             '                  </p>\n' +
                             '                 </div>\n' +
                             '             <div class="col-md-2 animated">\n' +
                             '            <p class="text-center text-dark">\n' +
                             '            <strong style="color: #6a04a0;">FROM</strong><br>\n' +
-                                            v.from.substr(0, 20) + '&hellip;' +
+                                            v.from.substr(0, 10) + '&hellip;' +
                             '            </p>\n' +
                             '             </div>\n' +
                             '             <div class="col-md-2 animated">\n' +
                             '             <p class="text-center text-dark">\n' +
                             '             <strong style="color: #6a04a0;">TO</strong><br>\n' +
-                                            v.to.substr(0, 20) + '&hellip;' +
+                                            v.to.substr(0, 10) + '&hellip;' +
                             '                     </p>\n' +
                             '                    </div>\n' +
                             '              <div class="col-md-1 animated">\n' +
