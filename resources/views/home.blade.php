@@ -470,53 +470,57 @@ Home
                                             <h2 class="title">Transactions</h2>
                                         </div>
 
-                                        @foreach($transactions as $item)
-                                        <div class="row align-items-center text-dark pt-3"
-                                             style="border-radius: 5px; background-color: #bad1fc;">
-                                            <div class="col-md-2 animated">
-                                                <p class="text-center text-dark">
-                                                    <strong style="color: #6a04a0;">TXHASH</strong><br>
-                                                    {{ $item->txhash }}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-1 animated">
-                                                <p class="text-center text-dark">
-                                                    <strong style="color: #6a04a0;">BLOCK</strong><br>
-                                                    {{ $item->block }}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-2 animated">
-                                                <p class="text-center text-dark">
-                                                    <strong style="color: #6a04a0;">FROM</strong><br>
-                                                    {{ $item->from }}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-2 animated">
-                                                <p class="text-center text-dark">
-                                                    <strong style="color: #6a04a0;">TO</strong><br>
-                                                    {{ $item->to }}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-1 animated">
-                                                <p class="text-center text-dark">
-                                                    <strong style="color: #6a04a0;">AGE</strong><br>
-                                                    {{ $item->age }}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-2 animated">
-                                                <p class="text-center text-dark">
-                                                    <strong style="color: #6a04a0;">VALUE</strong><br>
-                                                    {{ $item->value }}
-                                                </p>
-                                            </div>
-                                            <div class="col-md-2 animated">
-                                                <p class="text-center text-dark">
-                                                    <strong style="color: #6a04a0;">TXFEE</strong><br>
-                                                    {{ $item->txfee }}
-                                                </p>
-                                            </div>
+                                        <div id="transactions">
+
                                         </div>
-                                        @endforeach
+
+{{--                                        @foreach($transactions as $item)--}}
+{{--                                        <div class="row align-items-center text-dark pt-3"--}}
+{{--                                             style="border-radius: 5px; background-color: #bad1fc;">--}}
+{{--                                            <div class="col-md-2 animated">--}}
+{{--                                                <p class="text-center text-dark">--}}
+{{--                                                    <strong style="color: #6a04a0;">TXHASH</strong><br>--}}
+{{--                                                    {{ $item->txhash }}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-md-1 animated">--}}
+{{--                                                <p class="text-center text-dark">--}}
+{{--                                                    <strong style="color: #6a04a0;">BLOCK</strong><br>--}}
+{{--                                                    {{ $item->block }}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-md-2 animated">--}}
+{{--                                                <p class="text-center text-dark">--}}
+{{--                                                    <strong style="color: #6a04a0;">FROM</strong><br>--}}
+{{--                                                    {{ $item->from }}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-md-2 animated">--}}
+{{--                                                <p class="text-center text-dark">--}}
+{{--                                                    <strong style="color: #6a04a0;">TO</strong><br>--}}
+{{--                                                    {{ $item->to }}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-md-1 animated">--}}
+{{--                                                <p class="text-center text-dark">--}}
+{{--                                                    <strong style="color: #6a04a0;">AGE</strong><br>--}}
+{{--                                                    {{ $item->age }}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-md-2 animated">--}}
+{{--                                                <p class="text-center text-dark">--}}
+{{--                                                    <strong style="color: #6a04a0;">VALUE</strong><br>--}}
+{{--                                                    {{ $item->value }}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-md-2 animated">--}}
+{{--                                                <p class="text-center text-dark">--}}
+{{--                                                    <strong style="color: #6a04a0;">TXFEE</strong><br>--}}
+{{--                                                    {{ $item->txfee }}--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        @endforeach--}}
 
                                     </div>
                                 </div>
@@ -689,28 +693,28 @@ Home
 
                             </div>
                             <div class="team-profile mt-5">
-                                <div class="row mb-5">
+                                <div id="testimonies" class="row mb-5">
 
-                                    @foreach($testimonies as $item)
-                                    <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated jello"
-                                         data-animation="jello" data-animation-delay="0.5s" style="animation-delay: 0.5s; opacity: 1;">
-                                        <div class="d-flex">
-                                            <div class="team-img float-left mr-3"
-                                                 data-toggle="modal" data-target="#teamUser1">
-                                                <img src="{{ asset('photos/testimonies/'.$item->image) }}"
-                                                     alt="team-profile-1" class="rounded-circle" width="128">
-                                            </div>
-                                            <div class="team-icon">
-                                                <i class="ti-linkedin"></i>
-                                            </div>
-                                            <div class="profile align-self-center">
-                                                <div class="name">{{ $item->name }}</div>
-                                                <div class="role">{{ $item->occupation }}</div>
-                                                <div class="role"><i>{{ $item->testimony }}</i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
+{{--                                    @foreach($testimonies as $item)--}}
+{{--                                    <div class="col-sm-12 col-md-6 col-lg-4 mb-5 animated jello"--}}
+{{--                                         data-animation="jello" data-animation-delay="0.5s" style="animation-delay: 0.5s; opacity: 1;">--}}
+{{--                                        <div class="d-flex">--}}
+{{--                                            <div class="team-img float-left mr-3"--}}
+{{--                                                 data-toggle="modal" data-target="#teamUser1">--}}
+{{--                                                <img src="{{ asset('photos/testimonies/'.$item->image) }}"--}}
+{{--                                                     alt="team-profile-1" class="rounded-circle" width="128">--}}
+{{--                                            </div>--}}
+{{--                                            <div class="team-icon">--}}
+{{--                                                <i class="ti-linkedin"></i>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="profile align-self-center">--}}
+{{--                                                <div class="name">{{ $item->name }}</div>--}}
+{{--                                                <div class="role">{{ $item->occupation }}</div>--}}
+{{--                                                <div class="role"><i>{{ $item->testimony }}</i></div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    @endforeach--}}
 
                                 </div>
                             </div>
@@ -725,17 +729,23 @@ Home
                         <div class="container">
                             <div class="dark-bg-heading text-center">
                                 <div class="animated" data-animation="fadeInUpShorter" data-animation-delay="0.3s">
-                                    <h6 class="sub-title">question</h6>
+                                    <h6 class="sub-title">Question</h6>
                                     <h2 class="title">FAQ</h2>
                                 </div>
 
-                                <p class="content-desc animated" data-animation="fadeInUpShorter" data-animation-delay="0.4s">Originally the term "FAQ" referred to the Frequently Asked Question itself, and the <br class="d-none d-xl-block">compilation of questions and answers was known as a "FAQ list" or some similar expression.</p>
+                                <p class="content-desc animated" data-animation="fadeInUpShorter"
+                                   data-animation-delay="0.4s">
+                                    Originally the term "FAQ" referred to the Frequently Asked Question itself, and the</p>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <nav>
-                                        <div class="nav nav-pills nav-underline mb-5 animated" data-animation="fadeInUpShorter" data-animation-delay="0.5s" id="myTab" role="tablist">
-                                            <a href="#general" class="nav-item nav-link active" id="general-tab" data-toggle="tab" aria-controls="general" aria-selected="true" role="tab">General</a>
+                                        <div class="nav nav-pills nav-underline mb-5 animated"
+                                             data-animation="fadeInUpShorter" data-animation-delay="0.5s"
+                                             id="myTab" role="tablist">
+                                            <a href="#general" class="nav-item nav-link active" id="general-tab"
+                                               data-toggle="tab" aria-controls="general" aria-selected="true"
+                                               role="tab">General</a>
                                         </div>
                                     </nav>
                                     <div class="tab-content" id="myTabContent">
@@ -743,6 +753,8 @@ Home
                                              aria-labelledby="general-tab">
                                             <div id="general-accordion"
                                                  class="collapse-icon accordion-icon-rotate">
+
+                                                @foreach($faqs as $item)
                                                 <div class="card animated" data-animation="fadeInUpShorter"
                                                      data-animation-delay="0.1s">
                                                     <div class="card-header" id="headingOne">
@@ -751,7 +763,7 @@ Home
                                                                data-target="#collapseOne" aria-expanded="true"
                                                                aria-controls="collapseOne">
                                                                 <span class="icon gradient-crypto"></span>
-                                                                Can I make payments directly from an exchange?
+                                                                {{ $item->question }}
                                                             </a>
                                                         </h5>
                                                     </div>
@@ -760,116 +772,15 @@ Home
                                                          aria-labelledby="headingOne"
                                                          data-parent="#general-accordion">
                                                         <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                            {{ $item->answer }}
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <div class="card animated" data-animation="fadeInUpShorter"
-                                                     data-animation-delay="0.2s">
-                                                    <div class="card-header" id="headingTwo">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse"
-                                                               data-target="#collapseTwo" aria-expanded="false"
-                                                               aria-controls="collapseTwo">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                When will CICO be listed on exchanges?
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapseTwo" class="collapse"
-                                                         aria-labelledby="headingTwo"
-                                                         data-parent="#general-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card animated" data-animation="fadeInUpShorter"
-                                                     data-animation-delay="0.3s">
-                                                    <div class="card-header" id="headingThree">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse"
-                                                               data-target="#collapseThree" aria-expanded="false"
-                                                               aria-controls="collapseThree">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                What is the CICO Token asmart contract address?
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapseThree" class="collapse"
-                                                         aria-labelledby="headingThree"
-                                                         data-parent="#general-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="ico" role="tabpanel"
-                                             aria-labelledby="ico-tab">
-                                            <div id="ico-accordion" class="collapse-icon accordion-icon-rotate">
-                                                <div class="card">
-                                                    <div class="card-header" id="icoHeadingOne">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link" data-toggle="collapse"
-                                                               data-target="#icoCollapseOne" aria-expanded="true"
-                                                               aria-controls="icoCollapseOne">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Pityful a rethoric question ran over her cheek?
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-
-                                                    <div id="icoCollapseOne" class="collapse show"
-                                                         aria-labelledby="icoHeadingOne"
-                                                         data-parent="#ico-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="card">
-                                                    <div class="card-header" id="icoHeadingTwo">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse"
-                                                               data-target="#icoCollapseTwo"
-                                                               aria-expanded="false"
-                                                               aria-controls="icoCollapseTwo">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Which roasted parts of sentences fly into your mouth?
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="icoCollapseTwo" class="collapse"
-                                                         aria-labelledby="icoHeadingTwo"
-                                                         data-parent="#ico-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="card">
-                                                    <div class="card-header" id="icoHeadingThree">
-                                                        <h5 class="mb-0">
-                                                            <a class="btn-link collapsed" data-toggle="collapse" data-target="#icoCollapseThree" aria-expanded="false" aria-controls="icoCollapseThree">
-                                                                <span class="icon gradient-crypto"></span>
-                                                                Collapsible Group Item #3
-                                                            </a>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="icoCollapseThree" class="collapse" aria-labelledby="icoHeadingThree" data-parent="#ico-accordion">
-                                                        <div class="card-body">
-                                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
 
                                             </div>
                                         </div>
+
 
                                     </div>
                                 </div>

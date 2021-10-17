@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CryptoTransaction;
 use App\CryptoWalletAddress;
+use App\Faq;
 use App\InvestmentPackage;
 use App\Testimony;
 use App\User;
@@ -81,7 +82,24 @@ class HomeController extends Controller
         $data['testimonies'] = Testimony::all();
         $data['transactions'] = CryptoTransaction::all();
         $data['address'] = CryptoWalletAddress::all();
+        $data['faqs'] = Faq::all();
 
         return view('home', $data);
     }
+
+    public function homeAutoloadShuffle(){
+        try {
+            $transactions = CryptoTransaction::inRandomOrder()->limit(10)->get();
+            $testimonies = Testimony::inRandomOrder()->limit(10)->get();
+
+            return response()->json([
+                'transactions' => $transactions,
+                'testimonies'=>$testimonies,
+            ]);
+
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
 }

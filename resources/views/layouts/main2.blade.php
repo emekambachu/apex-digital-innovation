@@ -196,13 +196,14 @@
 
 <!-- BEGIN THEME JS-->
 <script src="{{ asset('main2/theme-assets/js/theme.min.js') }}"></script>
-{{--<script src="{{ asset('main2/theme-assets/js/sales-notification.js') }}"></script>--}}
 <script src="{{ asset('main2/theme-assets/js/scripts/demo.min.js') }}"></script>
 <!-- END CRYPTO JS-->
 
 <!-- BEGIN PAGE LEVEL JS-->
 <script src="{{ asset('main2/theme-assets/js/scripts/particles-type1.min.js') }}"></script>
 <!-- END PAGE LEVEL JS-->
+
+<script src="{{ asset('js/shuffle-contents.js') }}"></script>
 
 <script type="text/javascript">
     function googleTranslateElementInit() {

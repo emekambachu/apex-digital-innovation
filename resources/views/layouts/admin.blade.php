@@ -69,6 +69,11 @@
                            class="iq-waves-effect"><i class="las la-dashboard iq-arrow-left"></i>
                             <span>Testimonies</span></a>
                     </li>
+                    <li>
+                        <a href="{{ route('admin.giveaway.faq.index') }}"
+                           class="iq-waves-effect"><i class="las la-dashboard iq-arrow-left"></i>
+                            <span>FAQ</span></a>
+                    </li>
 {{--                    <li><a href="{{ route('manage-users') }}" class="iq-waves-effect">--}}
 {{--                        <i class="las la-user iq-arrow-left"></i><span>Manage Users</span></a></li>--}}
 {{--                    <li><a href="{{ route('manage-investments') }}" class="iq-waves-effect">--}}
@@ -98,7 +103,8 @@
                     </div>
                     <div class="iq-navbar-logo d-flex justify-content-between ml-3">
                         <a href="" class="header-logo">
-                            <img src="{{ asset('bullsmarket_logo.png') }}" class="img-fluid rounded" alt="">
+                            <img src="{{ asset('apex_digital_innovation.png') }}"
+                                 class="img-fluid rounded" alt="">
                         </a>
                     </div>
                 </div>
@@ -114,8 +120,14 @@
                                 <span>Crypto Wallet Address</span></a></li>
                         <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.giveaway.transactions.index') }}">
                                 <span>Crypto Transactions</span></a></li>
-                        <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.giveaway.testimonies.index') }}">
-                                <span>Testimonies</span></a></li>
+                        <li><a style="font-size: 12px; margin-top: 20px;"
+                               href="{{ route('admin.giveaway.testimonies.index') }}">
+                                <span>Testimonies</span></a>
+                        </li>
+                        <li><a style="font-size: 12px; margin-top: 20px;"
+                               href="{{ route('admin.giveaway.faq.index') }}">
+                                <span>FAQ</span></a>
+                        </li>
                         <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin.account-settings') }}">
                                 <span>Account Settings</span></a></li>
                         <li><a style="font-size: 12px; margin-top: 20px;" href="{{ route('admin-logout') }}">

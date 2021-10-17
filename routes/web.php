@@ -38,21 +38,9 @@ Route::get('terms', static function () {
     return view('terms');
 });
 
-Route::get('legal', static function () {
-    return view('legal');
-});
-
-Route::get('faq', static function () {
-    return view('faq');
-});
-
-Route::get('certificates', static function () {
-    return view('certificates');
-});
-
-Route::get('registration-complete', static function () {
-    return view('registration-complete');
-});
+Route::get('home/autoload/shuffle',
+    [\App\Http\Controllers\HomeController::class, 'homeAutoloadShuffle'])
+    ->name('home.autoload.shuffle');
 
 Route::post('contact/send', 'HomeController@contactForm');
 
@@ -250,6 +238,32 @@ Route::put('admin/giveaway/testimony/{id}/update',
 Route::delete('admin/giveaway/testimony/{id}/delete',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'deleteTestimony'])
     ->name('admin.giveaway.testimony.delete');
+
+// Admin FAQ
+Route::get('admin/giveaway/faq/index',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'indexFaq'])
+    ->name('admin.giveaway.faq.index');
+
+Route::get('admin/giveaway/faq/create',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'createFaq'])
+    ->name('admin.giveaway.faq.create');
+
+Route::post('admin/giveaway/faq/store',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'storeFaq'])
+    ->name('admin.giveaway.faq.store');
+
+Route::get('admin/giveaway/faq/{id}/edit',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'editFaq'])
+    ->name('admin.giveaway.faq.edit');
+
+Route::put('admin/giveaway/faq/{id}/update',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'updateFaq'])
+    ->name('admin.giveaway.faq.update');
+
+Route::delete('admin/giveaway/faq/{id}/delete',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'deleteFaq'])
+    ->name('admin.giveaway.faq.delete');
+
 
 // Github Deployment
 // Must disable csrf in Http/Middleware/VerifyCsrfToken

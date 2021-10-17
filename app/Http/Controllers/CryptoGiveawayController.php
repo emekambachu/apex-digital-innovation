@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CryptoTransaction;
 use App\CryptoWalletAddress;
+use App\Faq;
 use App\Testimony;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -328,6 +329,66 @@ class CryptoGiveawayController extends Controller
 
         $testimony = $this->getTestimonyId($id);
         $testimony->delete();
+        Session::flash('warning', 'Deleted');
+    }
+
+
+    public function indexFaq(){
+
+        $faqs = Faq::all();
+        return view('admin.giveaway.faq.index', compact('faqs'));
+    }
+
+    public function createFaq(){
+
+        return view('admin.giveaway.faq.create');
+    }
+
+    public function storeFaq(Request $request){
+
+        $request->validate([
+            'question' => 'required|min:2|string|unique:faqs,question',
+            'answer' => 'required|min:2|string',
+        ]);
+
+        $input = $request->all();
+
+        Faq::create($input);
+
+        Session::flash('success', 'Created');
+        return redirect()->back();
+    }
+
+    public function getFaqId($id){
+        return Faq::findOrFail($id);
+    }
+
+    public function editFaq($id){
+
+        $faq = $this->getFaqId($id);
+
+        return view('admin.giveaway.faq.edit', compact('faq'));
+    }
+
+    public function updateFaq(Request $request, $id){
+
+        $faq = $this->getFaqId($id);
+
+        $request->validate([
+            'question' => 'required|min:2|string|unique:faqs,question,'.$id,
+            'answer' => 'required|min:2|string',
+        ]);
+
+        $input = $request->all();
+
+        $faq->update($input);
+        Session::flash('success', 'Updated');
+    }
+
+    public function deleteFaq($id){
+
+        $faq = $this->getFaqId($id);
+        $faq->delete();
         Session::flash('warning', 'Deleted');
     }
 }
