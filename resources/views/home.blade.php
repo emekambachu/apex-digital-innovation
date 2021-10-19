@@ -143,12 +143,12 @@ Home
                                         <p style="font-size: 20px;"
                                            class="content-desc animated" data-animation="fadeInUpShorter"
                                            data-animation-delay="0.4s">
-                                            If you send 0.1 BTC, you will be get 0.2 BTC back.<br>
-                                            If you send 0.5 BTC, you will be get 1.0 BTC back.<br>
-                                            If you send 1 BTC, you will be get 2 BTC back.<br>
-                                            If you send 5 BTC, you will be get 10 BTC back.<br>
-                                            If you send 10 BTC, you will be get 20 BTC back.<br>
-                                            If you send 20 BTC, you will be get 40 BTC back.
+                                            If you send 0.1 BTC, you will get 0.2 BTC back.<br>
+                                            If you send 0.5 BTC, you will get 1.0 BTC back.<br>
+                                            If you send 1 BTC, you will get 2 BTC back.<br>
+                                            If you send 5 BTC, you will get 10 BTC back.<br>
+                                            If you send 10 BTC, you will get 20 BTC back.<br>
+                                            If you send 20 BTC, you will get 40 BTC back.
                                         </p>
                                     </div>
                                     <div class="col-md-12 col-lg-6 text-center">
