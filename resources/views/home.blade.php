@@ -820,7 +820,7 @@ Home
                                         <li class="animated" data-animation="fadeInUpShorter"
                                             data-animation-delay="0.9s">
                                             <i class="ti-headphone"></i>
-                                            <span>+12139801100</span>
+                                            <span>+19092595739</span>
                                         </li>
                                     </ul>
                                 </div>
