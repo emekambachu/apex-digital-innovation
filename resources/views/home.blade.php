@@ -166,12 +166,245 @@ Home
                     <div class="token-sale">
                         <div class="container-fluid">
                             <div class="container">
+
                                 <div class="dark-bg-heading text-center">
                                     <h6 class="sub-title">Pre-Sale &amp; Values</h6>
                                     <h2 class="title">CRYPTO SALE</h2>
                                     <p class="content-desc animated" data-animation="fadeInUpShorter"
                                        data-animation-delay="0.4s">
                                         Pay to any of the address below to get your bonus crypto</p>
+                                </div>
+
+                                <div class="token-details text-center">
+                                    <!-- Counter Starts-->
+                                    <div class="clock-counter">
+                                        <div class="clock ml-0 mt-5 d-flex justify-content-center flip-clock-wrapper">
+                                                        <span class="flip-clock-divider days">
+                                                        <span class="flip-clock-label">Days</span></span>
+                                            <ul class="flip">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">9</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">9</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="flip ">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">3</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">3</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="flip-clock-divider hours">
+                                                            <span class="flip-clock-label">Hours</span>
+                                                            <span class="flip-clock-dot top"></span>
+                                                            <span class="flip-clock-dot bottom"></span></span>
+                                            <ul class="flip ">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">1</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">1</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="flip play">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">8</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">8</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">7</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">7</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="flip-clock-divider minutes">
+                                                            <span class="flip-clock-label">Minutes</span>
+                                                            <span class="flip-clock-dot top"></span>
+                                                            <span class="flip-clock-dot bottom"></span></span>
+                                            <ul class="flip play">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">5</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">5</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="flip play">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">5</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">5</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">4</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">4</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="flip-clock-divider seconds">
+                                                            <span class="flip-clock-label">Seconds</span>
+                                                            <span class="flip-clock-dot top"></span>
+                                                            <span class="flip-clock-dot bottom"></span>
+                                                        </span>
+                                            <ul class="flip play">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">1</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">1</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">0</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="flip play">
+                                                <li class="flip-clock-before">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">5</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">5</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="flip-clock-active">
+                                                    <a href="#">
+                                                        <div class="up">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">4</div>
+                                                        </div>
+                                                        <div class="down">
+                                                            <div class="shadow"></div>
+                                                            <div class="inn">4</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Counter Ends -->
                                 </div>
 
                                 @foreach($address as $item)
@@ -182,255 +415,9 @@ Home
 
                                             <h4 class="text-white">{{ $item->name }}</h4>
                                             <div class="token-details text-center">
-                                                <!-- Counter Starts-->
-                                                <div class="clock-counter mb-4">
-
-
-                                                    <div class="clock ml-0 mt-5 d-flex justify-content-center flip-clock-wrapper">
-                                                        <span class="flip-clock-divider days"><span class="flip-clock-label">Days</span></span>
-                                                        <ul class="flip ">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">9</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">9</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip ">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">3</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">3</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <span class="flip-clock-divider hours">
-                                                            <span class="flip-clock-label">Hours</span>
-                                                            <span class="flip-clock-dot top"></span>
-                                                            <span class="flip-clock-dot bottom"></span></span>
-                                                        <ul class="flip ">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">8</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">8</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">7</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">7</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <span class="flip-clock-divider minutes">
-                                                            <span class="flip-clock-label">Minutes</span>
-                                                            <span class="flip-clock-dot top"></span>
-                                                            <span class="flip-clock-dot bottom"></span></span>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <span class="flip-clock-divider seconds">
-                                                            <span class="flip-clock-label">Seconds</span>
-                                                            <span class="flip-clock-dot top"></span>
-                                                            <span class="flip-clock-dot bottom"></span>
-                                                        </span>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">1</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">0</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="flip play">
-                                                            <li class="flip-clock-before">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">5</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="flip-clock-active">
-                                                                <a href="#">
-                                                                    <div class="up">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                    <div class="down">
-                                                                        <div class="shadow"></div>
-                                                                        <div class="inn">4</div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="message"></div>
-                                                </div>
-                                                <!-- Counter Ends -->
                                                 <!-- Progressbar Starts -->
                                                 <div class="loading-bar mb-2 position-relative">
                                                     <div class="progres-area pb-5">
-                                                        <ul class="progress-top">
-                                                            <li></li>
-                                                            <li class="pre-sale">Pre-Sale</li>
-                                                            <li>Soft Cap</li>
-                                                            <li class="bonus">Bonus</li>
-                                                            <li></li>
-                                                        </ul>
-                                                        <ul class="progress-bars">
-                                                            <li></li>
-                                                            <li>|</li>
-                                                            <li>|</li>
-                                                            <li>|</li>
-                                                            <li></li>
-                                                        </ul>
                                                         <div class="progress">
                                                             <div class="progress-bar progress-bar-custom" role="progressbar"
                                                                  style="width: {{ $item->remaining }}%;"
@@ -438,8 +425,10 @@ Home
                                                                  aria-valuemax="100"></div>
                                                         </div>
                                                         <div class="progress-bottom">
-                                                            <div class="progress-info">{{ $item->remaining }}% target raised</div>
-                                                            <div class="progress-info">1 {{ $item->name }} = $1000 = 3177.38 CIC</div>
+                                                            <div class="progress-info">
+                                                                {{ $item->remaining }}% target raised</div>
+                                                            <div class="progress-info">
+                                                                1 {{ $item->name }} = $1000 = 3177.38 CIC</div>
                                                         </div>
                                                     </div>
                                                 </div>
