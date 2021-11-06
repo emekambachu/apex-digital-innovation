@@ -6,6 +6,7 @@ use App\CryptoTransaction;
 use App\CryptoWalletAddress;
 use App\Faq;
 use App\Testimony;
+use App\Timer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
@@ -322,14 +323,18 @@ class CryptoGiveawayController extends Controller
         }
 
         $testimony->update($input);
+
         Session::flash('success', 'Updated');
+        return redirect()->back();
     }
 
     public function deleteTestimony($id){
 
         $testimony = $this->getTestimonyId($id);
         $testimony->delete();
+
         Session::flash('warning', 'Deleted');
+        return redirect()->back();
     }
 
 
@@ -380,9 +385,10 @@ class CryptoGiveawayController extends Controller
         ]);
 
         $input = $request->all();
-
         $faq->update($input);
+
         Session::flash('success', 'Updated');
+        return redirect()->back();
     }
 
     public function deleteFaq($id){
@@ -390,5 +396,31 @@ class CryptoGiveawayController extends Controller
         $faq = $this->getFaqId($id);
         $faq->delete();
         Session::flash('warning', 'Deleted');
+    }
+
+
+    public function indexTimer(){
+
+        $timer = Timer::all();
+        return view('admin.giveaway.timer.index', compact('timer'));
+    }
+
+    public function editTimer(){
+
+        $timer = Timer::where('id', 1)->first();
+        return view('admin.giveaway.timer.edit', compact('timer'));
+    }
+
+    public function updateTimer(Request $request){
+
+        $input = $request->all();
+        $timer = Timer::where('id', 1)->first();
+
+        $input['days'] = date("M j, G:i:s Y", strtotime($input['days']));
+
+        $timer->update($input);
+        Session::flash('success', 'Updated');
+
+        return redirect()->back();
     }
 }

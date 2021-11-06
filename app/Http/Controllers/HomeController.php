@@ -7,6 +7,7 @@ use App\CryptoWalletAddress;
 use App\Faq;
 use App\InvestmentPackage;
 use App\Testimony;
+use App\Timer;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -83,6 +84,9 @@ class HomeController extends Controller
         $data['transactions'] = CryptoTransaction::all();
         $data['address'] = CryptoWalletAddress::all();
         $data['faqs'] = Faq::all();
+
+        $data['timer'] = Timer::findOrFail(1);
+        $data['days'] = $data['timer']->days;
 
         return view('home', $data);
     }

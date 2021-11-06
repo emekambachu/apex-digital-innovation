@@ -9,6 +9,7 @@ use App\CryptoWalletAddress;
 use App\Investment;
 use App\InvestmentPackage;
 use App\Testimony;
+use App\Timer;
 use App\Transaction;
 use App\User;
 use App\Wallet;
@@ -46,6 +47,7 @@ class AdminController extends Controller
         $data['transactions'] = CryptoTransaction::limit(10)->get();
         $data['address'] = CryptoWalletAddress::limit(10)->get();
         $data['testimonies'] = Testimony::limit(10)->get();
+        $data['timer'] = Timer::findOrFail(1);
 
         return view('admin.index', $data);
     }

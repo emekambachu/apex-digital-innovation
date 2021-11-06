@@ -165,6 +165,19 @@ Route::delete('admin/wallet-address/{id}/delete', ['uses' => 'AdminController@de
     ->name('admin.wallet-address.delete');
 
 // Admin Crypto Giveaway Controller
+Route::get('admin/giveaway/timer/index',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'indexTimer'])
+    ->name('admin.giveaway.timer.index');
+
+Route::get('admin/giveaway/timer/edit',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'editTimer'])
+    ->name('admin.giveaway.timer.edit');
+
+Route::put('admin/giveaway/timer/update',
+    [\App\Http\Controllers\CryptoGiveawayController::class, 'updateTimer'])
+    ->name('admin.giveaway.timer.update');
+
+
 Route::get('admin/giveaway/crypto-wallet-address/index',
     [\App\Http\Controllers\CryptoGiveawayController::class, 'indexCryptoAddress'])
     ->name('admin.giveaway.crypto-wallet-address.index');
